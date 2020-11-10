@@ -1,0 +1,21 @@
+.d-inline {
+  margin: 1%;
+}
+
+.success-msg {
+  color: rgb(65, 131, 65);
+}
+
+.err-msg {
+  color: rgb(131, 65, 65);
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: right;
+  margin-top: 2%;
+}
+
+.social-media-links .social-media-icon {
+  margin-left: 1.5%;
+}
