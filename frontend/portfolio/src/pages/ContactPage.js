@@ -140,6 +140,7 @@ class ContactPage extends React.Component {
               className="social-media-icon"
               href="https://www.linkedin.com/in/venkatkm215"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 src={LinkedInIcon}
@@ -151,6 +152,7 @@ class ContactPage extends React.Component {
               className="social-media-icon"
               href="https://github.com/venkat215"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img src={GithubIcon} alt="https://github.com/venkat215"></img>
             </a>
@@ -159,6 +161,7 @@ class ContactPage extends React.Component {
               className="social-media-icon"
               href="https://www.instagram.com/venkatesh_km_/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 src={InstagramIcon}

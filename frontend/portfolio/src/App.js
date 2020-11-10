@@ -8,9 +8,6 @@ import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
-import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignupPage";
-import HelloPage from "./pages/HelloPage";
 import UnderDevelopment from "./pages/UnderDevelopmentPage";
 
 // import Footer from "./components/Footer";
@@ -43,7 +40,6 @@ class App extends React.Component {
         text:
           "Expect a response within 2 days if you have provided a valid email ID.",
       },
-      logged_in: true,
     };
   }
 
@@ -83,10 +79,6 @@ class App extends React.Component {
               />
             )}
           />
-
-          <Route path="/login" render={() => <LoginPage />} />
-          <Route path="/signup" render={() => <SignupPage />} />
-          <Route path="/hello" render={() => <HelloPage />} />
 
           <Route
             path="/under_development"

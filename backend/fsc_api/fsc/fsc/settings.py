@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'users.apps.UsersConfig',
+
     'external_users.apps.ExternalUsersConfig',
 
     'django.contrib.admin',
@@ -43,7 +43,6 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'corsheaders',
-    'rest_framework_simplejwt.token_blacklist',
 ]
 
 MIDDLEWARE = [
@@ -87,16 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     },
-    # 'users': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME':'fullstackcrafts',
-    #     'USER' : 'postgres',
-    #     'PASSWORD' : 'Abc@123',
-    #     'HOST' : '127.0.0.1',
-    #     'PORT' : '5432',
-    # }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -140,47 +130,18 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "build/static"),
 )
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-MEDIA_URL = "/media/"
-
-AUTH_USER_MODEL = "users.User"
-
-
-AUTHENTICATION_BACKENDS = (
-    'users.backends.UsernameOrEmailBackend',  # our custom authentication backend
-)
-
-# JWT
-# JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
-JWT_SECRET_KEY = "JWT_SECRET_KEY"
-
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
     ),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
 }
 
-SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=14),
-    'ROTATE_REFRESH_TOKENS': True,
-    'BLACKLIST_AFTER_ROTATION': True,
-    'ALGORITHM': 'HS256',
-    'SIGNING_KEY': JWT_SECRET_KEY,
-    'VERIFYING_KEY': None,
-    'AUTH_HEADER_TYPES': ('JWT',),
-    'USER_ID_FIELD': 'id',
-    'USER_ID_CLAIM': 'user_id',
-    'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
-    'TOKEN_TYPE_CLAIM': 'token_type',
-}
 
 CORS_ORIGIN_WHITELIST = [
     "http://127.0.0.1:8000",
+    "http://localhost:8000",
     "http://127.0.0.1:3000",
     "http://localhost:3000",
-    "http://localhost:8000",
+    "http://127.0.0.1:5000",
+    "http://localhost:5000",
 ]
