@@ -1,0 +1,12 @@
+.bg-custom {
+  background-color: rgb(240, 140, 140) !important;
+}
+
+.nav-link-current {
+  font-weight: bold;
+  color: whitesmoke !important;
+}
+
+#collasible-nav-dropdown::after {
+  display: none;
+}

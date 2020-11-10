@@ -1,0 +1,11 @@
+.d-inline {
+  margin: 1%;
+}
+
+.success-msg {
+  color: rgb(65, 131, 65);
+}
+
+.err-msg {
+  color: rgb(131, 65, 65);
+}
