@@ -5,9 +5,10 @@ import Carousel from "../components/Carousel";
 import Container from "react-bootstrap/esm/Container";
 
 function HomePage(props) {
+  document.title = "FSC - Home";
+
   return (
     <div>
-
       <Container fluid={true}>
         <MainBoard
           title={props.title}

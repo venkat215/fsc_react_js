@@ -9,6 +9,8 @@ import Resume from "../resources/files/Resume.pdf";
 import Button from "react-bootstrap/Button";
 
 function AboutPage(props) {
+  document.title = "FSC - About";
+
   return (
     <div>
       <MainBoard

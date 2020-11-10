@@ -10,6 +10,10 @@ import "./ContactPage.css";
 
 import Axios from "axios";
 
+import LinkedInIcon from "../resources/images/linkedin_icon.png";
+import InstagramIcon from "../resources/images/instagram_icon.png";
+import GithubIcon from "../resources/images/github_icon.png";
+
 class ContactPage extends React.Component {
   constructor(props) {
     super(props);
@@ -65,6 +69,10 @@ class ContactPage extends React.Component {
         });
       });
   };
+
+  componentDidMount() {
+    document.title = "FSC - Contact";
+  }
 
   render() {
     return (
@@ -126,6 +134,38 @@ class ContactPage extends React.Component {
               <p className="d-inline err-msg">Error</p>
             )}
           </Form>
+
+          <div className="social-media-links">
+            <a
+              className="social-media-icon"
+              href="https://www.linkedin.com/in/venkatkm215"
+              target="_blank"
+            >
+              <img
+                src={LinkedInIcon}
+                alt="https://www.linkedin.com/in/venkatkm215"
+              ></img>
+            </a>
+
+            <a
+              className="social-media-icon"
+              href="https://github.com/venkat215"
+              target="_blank"
+            >
+              <img src={GithubIcon} alt="https://github.com/venkat215"></img>
+            </a>
+
+            <a
+              className="social-media-icon"
+              href="https://www.instagram.com/venkatesh_km_/"
+              target="_blank"
+            >
+              <img
+                src={InstagramIcon}
+                alt="https://www.instagram.com/venkatesh_km_/"
+              ></img>
+            </a>
+          </div>
         </Content>
       </div>
     );

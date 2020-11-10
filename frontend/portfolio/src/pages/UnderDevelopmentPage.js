@@ -2,6 +2,8 @@ import React from "react";
 import WorkingOnIt from "../resources/images/working-on-it.png";
 
 function UnderDevelopment() {
+  document.title = "FSC - Under Development";
+
   return (
     <div
       style={{

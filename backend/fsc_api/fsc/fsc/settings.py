@@ -63,7 +63,7 @@ ROOT_URLCONF = 'fsc.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -136,9 +136,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-AUTH_USER_MODEL = "users.User"
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "build/static"),
+)
+
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
+
+AUTH_USER_MODEL = "users.User"
+
 
 AUTHENTICATION_BACKENDS = (
     'users.backends.UsernameOrEmailBackend',  # our custom authentication backend
