@@ -44,7 +44,7 @@ class ContactPage extends React.Component {
     });
 
     Axios.post(
-      "http://localhost:8000/api/external_user/external_user_message/",
+      "https://fullstackcrafts.herokuapp.com/api/external_user/external_user_message/",
       this.state
     )
       .then((res) => {
